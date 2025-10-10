@@ -1,0 +1,8 @@
+[
+  { "province": "Alberta", "vacancyRate": 7.2, "avgAge": 44 },
+  { "province": "British Columbia", "vacancyRate": 6.1, "avgAge": 45 },
+  { "province": "Ontario", "vacancyRate": 5.8, "avgAge": 46 },
+  { "province": "Quebec", "vacancyRate": 6.5, "avgAge": 43 },
+  { "province": "Manitoba", "vacancyRate": 5.3, "avgAge": 44 },
+  { "province": "Nova Scotia", "vacancyRate": 6.9, "avgAge": 45 }
+]
