@@ -1,19 +1,27 @@
-function StatCard({ title, value, note }) {
+import { formatValue } from "../utils/format.js";
+
+export default function StatCard({ title, value, note }) {
   return (
-    <div style={{
-      backgroundColor: "white",
-      borderRadius: "1rem",
-      boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-      padding: "1rem",
-      textAlign: "center"
-    }}>
-      <h3 style={{ color: "#6b7280", fontSize: "0.9rem" }}>{title}</h3>
-      <p style={{ color: "#4F46E5", fontSize: "1.5rem", fontWeight: 700, margin: "0.25rem 0" }}>
-        {value}
+    <div
+      style={{
+        backgroundColor: "white",
+        padding: "1.5rem",
+        borderRadius: "0.5rem",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+      }}
+    >
+      <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.5rem" }}>
+        {title}
+      </h3>
+      <p style={{ fontSize: "1.5rem", fontWeight: "bold", margin: 0 }}>
+        {formatValue(title.toLowerCase().replace(/ /g, ""), value)}
       </p>
-      {note && <p style={{ fontSize: "0.75rem", color: "#9ca3af" }}>{note}</p>}
+      {note && (
+        <p style={{ fontSize: "0.75rem", color: "#6b7280", marginTop: "0.5rem" }}>
+          {note}
+        </p>
+      )}
     </div>
   );
 }
 
-export default StatCard;
